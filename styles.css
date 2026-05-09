@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
 }
 .tarjeta{
     font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
@@ -11,8 +11,8 @@ body{
     display: flex;
     background-color: hsl(0, 0%, 100%);
     border-radius: 20px;
-    min-width: 320px;
-    max-width: 650px;
+    width: 650px;
+    max-width: 100%;
 }
 .izquierda{
     color: hsl(0, 0%, 100%);
@@ -102,4 +102,26 @@ a{
 }
 a:hover{
     background-color: hsl(241, 81%, 54%);
+}
+@media (max-width: 768px){
+
+    body{
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .tarjeta{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .izquierda{
+        width: auto;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .derecha{
+        width: auto;
+    }
+
 }
